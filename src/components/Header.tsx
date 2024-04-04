@@ -1,4 +1,5 @@
 import { GeolocalizationApi } from '../hooks/useConnectApi'
+import AddressInfo from './AddressInfo';
 import IpSearch from './IpSearch';
 
 
@@ -22,28 +23,21 @@ const Header = ({ipLocalization, setIpvalue}: HeaderProps) => {
             bg-white rounded-2xl
             flex flex-col gap-4 items-center justify-center 
             w-[90%] h-[300px]
-
             [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:text-center [&>*]:gap-1
             [&>*>span]:text-tw-dark-gray [&>*>span]:font-bold [&>*>span]:uppercase [&>*>span]:text-xs
             [&>*>p]:text-tw-very-dark-gray [&>*>p]:font-bold [&>*>p]:text-lg
             '
         >
-            <div>
-                <span>ip address</span>
-                <p>{ipLocalization && ipLocalization.ip}</p>
-            </div>
-            <div>
-                <span>location</span>
-                <p>{ipLocalization && ipLocalization.location.city}</p>
-            </div>
-            <div>
-                <span>timezone</span>
-                <p>{ipLocalization && ipLocalization.location.timezone}</p>
-            </div>
-            <div>
-                <span>isp</span>
-                <p>{ipLocalization && ipLocalization.isp}</p>
-            </div>
+            {
+                ipLocalization && (
+                    <>
+                        <AddressInfo text='ip address' info={ipLocalization.ip}/>
+                        <AddressInfo text='location' info={ipLocalization.location.city}/>
+                        <AddressInfo text='timezone' info={ipLocalization.location.timezone}/>
+                        <AddressInfo text='isp' info={ipLocalization.isp}/>
+                    </>
+                )
+            }
         </div>
     </header>
   )
