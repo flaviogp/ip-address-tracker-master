@@ -7,7 +7,6 @@ type MapProps = {
 }
 
 const Map = ({latlng}: MapProps) => {
-  console.log(latlng)
 
   return (
     <div

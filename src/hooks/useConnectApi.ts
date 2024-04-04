@@ -28,21 +28,22 @@ export default function useConnectApi(ipAddress?: string) {
     const [isLoading, setIsLoading] = useState(false);
     const [ipLocalization, setIpLocalization] = useState<GeolocalizationApi | null>(null);
 
+
     useEffect(() => {
 
         fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_API_KEY}&${ipAddress ? `ipAddress=${ipAddress}` : ''}`)
             .then(res => res.json())
             .then((res) => {
                 setIpLocalization(res)
-                console.log(res);
             })
             .catch((error) => {
+                console.log(error)
                 throw new Error(error);
             }).finally(() => setIsLoading(false))
     }, [ipAddress])
 
     return {
         isLoading,
-        ipLocalization
+        ipLocalization,
     }
 }

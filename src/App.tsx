@@ -10,7 +10,6 @@ function App() {
   const [ipValue, setIpvalue] = useState('')
 
   const {ipLocalization} = useConnectApi(ipValue)
-  console.log(ipLocalization)
 
     useEffect(() => {
       if(ipLocalization){
@@ -19,15 +18,14 @@ function App() {
       return;
     },[ipLocalization])
 
+    console.log(ipLocalization)
   return (
-    <div className="w-full h-screen">
-      <Header ipLocalization={ipLocalization} setIpvalue={setIpvalue}/>
-      <Map 
-        latlng={latlng}
-      />
-      <div>
+      <div className="w-full h-screen">
+        <Header ipLocalization={ipLocalization} setIpvalue={setIpvalue}/>
+        <Map 
+          latlng={latlng}
+        />
       </div>
-    </div>
   )
 }
 
