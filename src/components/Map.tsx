@@ -14,7 +14,7 @@ const Map = ({latlng}: MapProps) => {
     >
         <MapContainer 
           center={latlng} 
-          zoom={15} 
+          zoom={13} 
           scrollWheelZoom={true} 
           className='absolute top-0 bottom-0 left-0 right-0' >
             <TileLayer 
