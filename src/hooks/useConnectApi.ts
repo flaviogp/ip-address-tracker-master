@@ -37,8 +37,7 @@ export default function useConnectApi(ipAddress?: string) {
                 setIpLocalization(res)
             })
             .catch((error) => {
-                console.log(error)
-                throw new Error(error);
+                throw new Error(error.message);
             }).finally(() => setIsLoading(false))
     }, [ipAddress])
 

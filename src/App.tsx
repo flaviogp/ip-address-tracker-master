@@ -18,7 +18,6 @@ function App() {
       return;
     },[ipLocalization])
 
-    console.log(ipLocalization)
   return (
       <div className="w-full h-screen">
         <Header ipLocalization={ipLocalization} setIpvalue={setIpvalue}/>

@@ -48,7 +48,7 @@ const IpSearch = ({setIpvalue}: IpSearchProps) => {
         </label>
         {
             error && 
-                <span className=' text-center p-1 px-3 rounded-full bg-red-700 text-white'>
+                <span className=' uppercase text-center p-1 px-3 rounded-full bg-red-700 text-white'>
                     {error}
                 </span>
         }
