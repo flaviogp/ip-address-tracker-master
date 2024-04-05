@@ -12,20 +12,19 @@ const Header = ({ipLocalization, setIpvalue}: HeaderProps) => {
   return (
     <header className='
         w-full h-[300px] bg-tw-pattern-mobile bg-cover bg-no-repeat
-        flex flex-col items-center
-        relative p-5  gap-5
+        flex flex-col items-center relative p-5  gap-5
+        md:bg-tw-pattern-desktop md:h-[250px]
+
         '
     >
         <h1 className='text-white'>IP Adress Tracker</h1>
         < IpSearch setIpvalue={setIpvalue}/>
         <div className='
             p-5 absolute top-[calc(100%-150px)] z-10 
-            bg-white rounded-2xl
+            bg-white rounded-2xl w-[90%] h-[300px]
             flex flex-col gap-4 items-center justify-center 
-            w-[90%] h-[300px]
-            [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:text-center [&>*]:gap-1
-            [&>*>span]:text-tw-dark-gray [&>*>span]:font-bold [&>*>span]:uppercase [&>*>span]:text-xs
-            [&>*>p]:text-tw-very-dark-gray [&>*>p]:font-bold [&>*>p]:text-lg
+            md:flex-row md:max-h-[150px] md:top-[calc(100%-75px)]
+            last:[&>*]:before:content-none
             '
         >
             {
