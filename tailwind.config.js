@@ -9,8 +9,8 @@ export default {
       },
 
       backgroundImage: {
-        "tw-pattern-desktop": "url(./src/assets/images/pattern-bg-desktop.png)",
-        "tw-pattern-mobile": "url(./src/assets/images/pattern-bg-mobile.png)"
+        "tw-pattern-desktop": "url(./assets/images/pattern-bg-desktop.png)",
+        "tw-pattern-mobile": "url(./assets/images/pattern-bg-mobile.png)"
       }
     },
   },
