@@ -7,7 +7,7 @@ import { LatLngExpression } from "leaflet"
 
 function App() {
   const [latlng, setLatlng] = useState<LatLngExpression>([0,0])
-  const [ipValue, setIpvalue] = useState('')
+  const [ipValue, setIpvalue] = useState('8.8.8.8')
 
   const {ipLocalization} = useConnectApi(ipValue)
 
